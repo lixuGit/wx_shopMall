@@ -1,0 +1,27 @@
+<view class="main">
+    <view class='goods-box'>
+        <view>
+          <image class='goods-img' src='{{goods.image}}'></image>
+        </view>
+        <view class='goods-operation'>
+            <text class='total-sub' bindtap='subCount'>-</text>
+            <text>{{goodsNum}}</text>
+            <text class='total-add' bindtap='addCount'>+</text>
+            <text class='addCart' bindtap='addToCart'>加入购物车</text>
+            <image class='s-cart' src='../../../images/cart1.png'></image>
+        </view>
+        <view class='goods-store m-b-20'>{{goods.stock}}</view>
+        <view class='goods-detail-name m-b-20'>{{goods.title}}</view>
+        <view class='goods-price'>￥{{goods.price}}</view>
+    </view>
+    <view class='goods-tab-box'>
+      <block wx:for="{{tabList}}">
+        <view class='goods-tab-nav {{currentIndex == item.id ? "on" : ""}} ' bindtap='currentTab' data-index="{{item.id}}">{{item.title}}</view>
+      </block>
+    </view>
+    <view class='goods-content p-30'>
+        <view wx:if="{{currentIndex === 0}}">{{goods.detail}}</view>
+        <view wx:if="{{currentIndex === 1}}">{{goods.parameter}}</view>
+        <view wx:if="{{currentIndex === 2}}">{{goods.service}}</view>
+    </view>
+</view>

@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/component/index/index",
+    "pages/component/classify/classify",
+    "pages/component/person/person",
+    "pages/component/cart/cart",
+    "pages/component/detail/detail",
+    "pages/component/address/address",
+    "pages/component/navbar/navbar"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FE224A",
+    "navigationBarTitleText": "网上商城",
+    "navigationBarTextStyle": "#fff",
+    "backgroundColor": "#ff0000",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#b7b7b7",
+    "backgroundColor": "#f5f5f5",
+    "selectedColor": "#FE224A",
+    "list": [
+      {
+        "pagePath": "pages/component/index/index",
+        "text": "首页",
+        "iconPath": "images/12.png",
+        "selectedIconPath": "images/11.png"
+      },
+      {
+        "pagePath": "pages/component/classify/classify",
+        "text": "分类",
+        "iconPath": "images/22.png",
+        "selectedIconPath": "images/21.png"
+      },
+      {
+        "pagePath": "pages/component/cart/cart",
+        "text": "购物车",
+        "iconPath": "images/32.png",
+        "selectedIconPath": "images/31.png"
+      },
+      {
+        "pagePath": "pages/component/person/person",
+        "text": "个人",
+        "iconPath": "images/42.png",
+        "selectedIconPath": "images/41.png"
+      }
+    ]
+  }
+}

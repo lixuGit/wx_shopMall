@@ -1,0 +1,14 @@
+/* pages/component/index/index.wxss */
+@import "../../../utils/wxSearch/wxSearch.wxss";
+.wxSearch-section {
+  background: #FE224A;
+  border: none;
+  border-top: 1px solid #eee;
+}
+.wxSearch-input {
+  background: #ffffff;
+  box-shadow: -2rpx -2rpx 0 #f5f5f5;
+}
+.wxSearch {
+  z-index: 9999;
+}

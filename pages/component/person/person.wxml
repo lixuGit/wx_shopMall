@@ -1,0 +1,39 @@
+<view class='page' style='background: #eee;'>
+    <view class='userInfo'>
+      <image class='userInfo-avatar' src='{{userInfo.avatarUrl}}'></image>
+      <text>{{userInfo.nickName}}</text>
+      <text class='userInfo-integral'>积分签到：今日可领取5个积分</text>
+    </view>
+    <!-- 我的订单 -->
+    <view class='userInfo-order'>
+      <text class='my-order'>我的订单</text>
+      <navigator class='check-order' url="" hover-class='none'>查看全部订单</navigator>
+    </view>
+
+    <!-- 发货状态 -->
+    <view class='ship-status'>
+      <block wx:for="{{orderStatus}}" wx:key="orderStatus">
+          <navigator class='ship-nav' url='' hover-class='none'>
+            <view>
+              <image class='ship-img' src='{{item.imgUrl}}'></image>
+            </view>
+            <text class='ship-text'>{{item.title}} <text style='color: red'>{{item.initNum}}</text></text>
+          </navigator>
+      </block>
+    </view>
+
+    <view class='my-info'>
+      <block wx:for="{{personalInfo}}" wx:key="personalInfo">
+        <navigator class='my-nav' url='' hover-class='none'>
+          <view>
+            <image class='ship-img' src='{{item.imgUrl}}'></image>
+          </view>
+          <text class='ship-text'>{{item.title}}</text>
+          <view>
+          <text style='color: red'></text>
+          </view>
+        </navigator>
+      </block>
+    </view>
+    <button bindtap='tell'>联系我们</button>
+</view>

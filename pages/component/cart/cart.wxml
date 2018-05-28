@@ -1,0 +1,11 @@
+<view class="page">
+<nav-bar></nav-bar>
+  <view class='cart-footer'>
+      <view>
+        <icon type='success_circle' size='24'></icon>
+        <text>全选</text>
+        <text>￥0</text>
+      </view>
+      <view class='button'>立即结算</view>
+  </view>
+</view>

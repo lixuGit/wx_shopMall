@@ -1,0 +1,21 @@
+//navBar.wxml
+<view>我是navBar</view>
+<!--渲染列表btnChildrenArray，并且绑定了clickTest方法，设置索引为index-->
+<view class="test" wx:for="{{btnChildrenArray}}" bindtap='clickTest' data-index="{{index}}" wx:key="{{item.id}}">
+    {{item.name}}
+    <!--每个一级菜单的下拉的部分，wx:if根据js中的status[index]的值，来控制是否渲染某一个下拉部分-->
+      <view wx:if="{{status[index]}}">
+      <!--每一个一级菜单的下拉部分的列表渲染，渲染msg部分-->
+        <block wx:for="{{item.msg}}" wx:for-item="todo"  wx:key="todo.id">
+          <!--wx:if判断todo.url是否成立，成立就渲染navigator标签-->
+          <navigator  wx:if="{{todo.url}}">
+              {{todo.msgName}}
+          </navigator> 
+          <!--wx:if判断todo.methods是否成立，成立就渲染text标签-->
+          <text  wx:elif="{{todo.methods}}" bindtap='{{todo.methods}}'>{{todo.msgName}}</text> 
+          <!--wx:if判断todo.isContact，成立就渲染button标签-->
+          <button wx:else="{{todo.isContact}}" open-type="contact" class='testClass'>{{todo.msgName}}</button> 
+        </block>    
+        <view class='item.name' wx:for="{{hah}}" wx:key="index" wx:for-item="item"></view>       
+      </view>
+</view>

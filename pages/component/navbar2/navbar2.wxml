@@ -1,0 +1,14 @@
+<!--pages/component/navbar2/navbar2.wxml-->
+<view>navbar2</view>
+<view class='navbar'>
+  <view class='list {{status[index] ? "on": ""}}' wx:for="{{btnChildrenArray}}" data-index="{{index}}" bindtap='clickTab' wx:key="{{item.id}}">
+      {{item.name}}
+      <view wx:if="{{status[index]}}">
+          <view wx:for="{{item.msg}}" wx:for-item="it" wx:key="{{it.id}}">
+              <navigator wx:if="{{it.url}}">{{it.msgName}}</navigator>
+              <text wx:elif="{{it.methods}}" bindtap='it.methods'>{{it.msgName}}</text>
+              <button wx:else="{{it.isContact}}">{{it.msgName}}</button>
+          </view>
+      </view>
+  </view>
+</view>

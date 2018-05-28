@@ -1,0 +1,16 @@
+/* pages/component/navbar2/navbar2.wxss */
+.navbar {
+  display: flex;
+}
+.list {
+  flex: 1;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  border: 1px solid #a5a5a5;
+  box-sizing: border-box;
+
+}
+.list.on {
+  border-bottom: 5px solid #FE224A;
+}

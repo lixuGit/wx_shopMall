@@ -1,0 +1,9 @@
+/* pages/component/navbar/navbar.wxss */
+.test{
+  float: left;
+  width: 200rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  border:1px solid;
+}

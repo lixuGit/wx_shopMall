@@ -1,0 +1,21 @@
+<!--pages/component/index/index.wxml-->
+ <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+<import src="../../../utils/wxSearch/wxSearch.wxml"/>
+<!-- 搜索框 -->
+<view class='wxSearch-section'>
+  <view class='wxSearch-pancel'>
+     <input bindinput="wxSearchInput" bindfocus="wxSerchFocus" value="{{wxSearchData.value}}" bindblur="wxSearchBlur" class="wxSearch-input" placeholder="商品搜索，请输入关键词" />
+    <button class='wxSearch-button' bindtap="wxSearchFn" size='mini' plain='true'>搜索</button>
+  </view>
+</view>
+
+<template is="wxSearch" data="{{wxSearchData}}"/>
+
+<!-- 轮播 -->
+<swiper indicator-dots="true" autoplay='true' interval='{{interval}}' duration="{{duration}}">
+  <block wx:for="{{swiperImgs}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src='{{item.src}}' class='slide-image' style='width: 100%;'></image>
+    </swiper-item>
+  </block>
+</swiper>
